@@ -1,6 +1,6 @@
 {
-  "name": "package.json",
-  "version": "1.0.0",
+  "name": "uf-cicd-calcjs-juan",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "jest"
