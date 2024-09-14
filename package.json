@@ -1,6 +1,6 @@
 {
   "name": "uf-cicd-calcjs-juan",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "main": "index.js",
   "scripts": {
     "test": "jest"
