@@ -46,17 +46,17 @@ publish:
 
 # Passo 3: Autenticar no NPM
       - name: Authenticate to npm
-        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
 # Passo 4: Publicar no npm, se a versão tiver sido incrementada
       - name: Publish to npm
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 
  # Passo 4: Rodar análise de código com SonarCloud
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
